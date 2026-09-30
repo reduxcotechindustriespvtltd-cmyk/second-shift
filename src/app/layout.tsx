@@ -22,9 +22,9 @@ const spaceGrotesk = Space_Grotesk({
   weight: ["400", "500", "600", "700"],
 });
 
-const defaultTitle = "Second Shift | Sports Event Company in Jaipur, Rajasthan";
+const defaultTitle = "Second Shift";
 const defaultDescription =
-  "Second Shift is a sports event management company in Jaipur running corporate sports events, private leagues & tournaments, and the Sunday League — Rajasthan's leading multi-sport amateur league across Football, Cricket & Pickleball.";
+  "Curated sporting experiences that bring employees together, encourage engagement and strengthen workplace connections";
 
 export const metadata: Metadata = {
   metadataBase: new URL(site.url),
