@@ -11,6 +11,7 @@ export const metadata: Metadata = {
   title: "About Us",
   description:
     "Second Shift is a sports events and experiences company in Jaipur, Rajasthan. Our story, how we curate and execute every event end-to-end, and what players and partners say about us.",
+  alternates: { canonical: "/about" },
 };
 
 export default function AboutPage() {

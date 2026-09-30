@@ -70,11 +70,6 @@ export function Footer() {
                   {site.email}
                 </a>
               </li>
-              <li>
-                <Link href="/terms" className="transition-colors hover:text-volt">
-                  Terms &amp; Privacy
-                </Link>
-              </li>
               <li className="flex items-center gap-2 pt-1 text-xs uppercase tracking-wide text-off-white/40">
                 <SlashMark bars={3} className="scale-75" />
                 Made in Rajasthan
@@ -85,6 +80,15 @@ export function Footer() {
 
         <div className="flex flex-col items-center justify-between gap-4 py-8 text-xs text-off-white/40 sm:flex-row">
           <p>&copy; {new Date().getFullYear()} Second Shift. All rights reserved.</p>
+          <ul className="flex flex-wrap items-center justify-center gap-x-5 gap-y-2">
+            {footerLinks.legalLinks.map((link) => (
+              <li key={link.href}>
+                <Link href={link.href} className="transition-colors hover:text-volt">
+                  {link.label}
+                </Link>
+              </li>
+            ))}
+          </ul>
           <p>Compete. Connect. Belong.</p>
         </div>
       </div>

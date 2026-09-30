@@ -14,6 +14,7 @@ export const metadata: Metadata = {
   title: "Corporate Sports Events & Team Building in Jaipur",
   description:
     "Corporate sports event management in Jaipur, Rajasthan — employee engagement activities, corporate sports days and inter-company tournaments, planned and executed end-to-end by Second Shift.",
+  alternates: { canonical: "/corporate" },
 };
 
 export default function CorporatePage() {

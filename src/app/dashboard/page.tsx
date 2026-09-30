@@ -5,6 +5,7 @@ export const metadata: Metadata = {
   title: "Dashboard — The Second Shift Web App",
   description:
     "Live fixtures, leaderboards, scoring, match results, individual stats and player profiles — the digital layer behind every Second Shift league.",
+  alternates: { canonical: "/dashboard" },
 };
 
 export default function DashboardPage() {

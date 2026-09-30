@@ -6,6 +6,7 @@ import { IntroLoader } from "@/components/intro-loader";
 import { Navbar } from "@/components/navbar";
 import { Footer } from "@/components/footer";
 import { WhatsAppButton } from "@/components/ui/whatsapp-button";
+import { CookieConsent } from "@/components/cookie-consent";
 import { site } from "@/data/content";
 import "./globals.css";
 
@@ -32,6 +33,7 @@ export const metadata: Metadata = {
     template: "%s | Second Shift",
   },
   description: defaultDescription,
+  alternates: { canonical: "/" },
   keywords: [
     "sports events company",
     "corporate sports events",
@@ -102,6 +104,7 @@ export default function RootLayout({ children }: LayoutProps<"/">) {
           <main className="flex-1">{children}</main>
           <Footer />
           <WhatsAppButton />
+          <CookieConsent />
         </SmoothScroll>
       </body>
     </html>
