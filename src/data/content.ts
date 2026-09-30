@@ -36,35 +36,35 @@ export const hero = {
   tag: "SPORTS, CURATED FOR EVERY OCCASION.",
   headline: ["COMPETE.", "CONNECT.", "BELONG."],
   subheadline:
-    "Rajasthan's leading multi-sport amateur league, bringing working professionals together through Football, Cricket & Pickleball.",
+    "Curating sports experiences that bring people together, bringing working professionals together through Football, Cricket & Pickleball.",
   cta: { label: "Partner With Us", href: "/corporate" },
   // Rotating hero slides — image + label crossfade together every few seconds.
   slides: [
     {
       label: "Football",
       image: {
-        src: "/images/sports/football-action.jpg",
+        src: "/images/sports/football-net.png",
         alt: "Second Shift player striking the ball mid-action on a Sunday League football pitch",
       },
     },
     {
       label: "Cricket",
       image: {
-        src: "/images/sports/cricket-players.jpg",
+        src: "/images/sports/cricket-players1.jpg",
         alt: "Two Second Shift cricketers talking mid-pitch during a night match",
       },
     },
     {
       label: "Pickleball",
       image: {
-        src: "/images/sports/pickleball-action.jpg",
+        src: "/images/sports/pickleball-action1.png",
         alt: "Two Second Shift players at the net during a pickleball doubles match",
       },
     },
     {
       label: "Padel",
       image: {
-        src: "/images/our-work/padel-open.jpg",
+        src: "/images/our-work/padel-open1.png",
         alt: "Padel Open 2026 winners holding their trophies on the Rally X padel court",
       },
     },
@@ -112,11 +112,11 @@ export const about = {
       alt: "Goalkeeper diving to make a save during a Second Shift Sunday League football match",
     },
     teamHuddle: {
-      src: "/images/gallery/team-picnic-celebration.jpg",
+      src: "/images/sports/ab1.png",
       alt: "Second Shift team celebrating together after a match, sharing drinks under the trees",
     },
     teamSponsorWall: {
-      src: "/images/gallery/team-sponsor-wall.png",
+      src: "/images/sports/about1.png",
       alt: "Second Shift team posing in front of the Sunday League sponsor step-and-repeat wall",
     },
   },
@@ -129,9 +129,9 @@ export const sports = {
       key: "football",
       name: "Football",
       description:
-        "7-a-side turf football, played every Sunday. Fast, physical, and fiercely competitive.",
+        "5-a-side turf football, played every Sunday. Fast, physical, and fiercely competitive.",
       image: {
-        src: "/images/sports/football-action.jpg",
+        src: "/images/sports/football-net.png",
         alt: "Second Shift footballer taking a shot on goal during a match",
       },
     },
@@ -141,8 +141,8 @@ export const sports = {
       description:
         "Box cricket under lights, built for working professionals who still want to bat, bowl and bicker about the umpire.",
       image: {
-        src: "/images/sports/cricket-players.jpg",
-        alt: "Two Second Shift cricketers talking mid-pitch during a night match",
+        src: "/images/sports/cricket-batting1.png",
+        alt: "Second Shift cricketer playing a big shot during a box cricket match",
       },
     },
     {
@@ -151,7 +151,7 @@ export const sports = {
       description:
         "The fastest-growing racquet sport, now Rajasthan's newest office obsession — doubles, drama and all.",
       image: {
-        src: "/images/sports/pickleball-action.jpg",
+        src: "/images/sports/pickleball-action1.png",
         alt: "Two Second Shift players at the net during a pickleball doubles match",
       },
     },
@@ -176,7 +176,7 @@ export const execution = {
       alt: "Red Bull branded activation car with a giant can rig at a Second Shift event",
     },
     {
-      src: "/images/corporate/hydration-station.jpg",
+      src: "/images/sports/abcde1.png",
       alt: "Branded Second Shift hydration station with water bottles at a corporate sports event",
     },
   ],
@@ -189,15 +189,15 @@ export const experience = {
   badge: "MEMORIES CREATED",
   images: {
     action: {
-      src: "/images/sports/football-action.jpg",
+      src: "/images/sports/football-net.png",
       alt: "Second Shift player mid-kick during a Sunday League football match",
     },
     trophy: {
-      src: "/images/gallery/pickleball-champion-podium.jpg",
+      src: "/images/sports/abcdef1.png",
       alt: "Second Shift Sunday League Season 1 Pickleball Champions holding their trophies on the podium",
     },
     cricketChat: {
-      src: "/images/sports/cricket-players.jpg",
+      src: "/images/sports/cricket-1.png",
       alt: "Two batters chatting mid-pitch during a Second Shift cricket match",
     },
   },
@@ -210,7 +210,7 @@ export const corporate = {
   cta: { label: "Let's Plan Your Event", href: "/plan-your-event" },
   heroImage: {
     src: "/images/corporate/corporate-action-hero.jpg",
-    alt: "Second Shift corporate sports player sprinting on a turf pitch during a corporate sports event",
+    alt: "Post-match interview with a Player of the Match award in front of the Second Shift sponsor wall",
   },
   challenge: {
     eyebrow: "THE CHALLENGE",
@@ -238,7 +238,7 @@ export const corporate = {
       description: "Live Food Counters, Wider Variety of Options, Dinner",
       image: {
         src: "/images/corporate/fnb-experience.jpg",
-        alt: "Branded food stall and hospitality setup at a Second Shift corporate event",
+        alt: "Branded Second Shift Hydration Station with a Coca-Cola cooler at a corporate sports event",
       },
     },
     {
@@ -247,7 +247,7 @@ export const corporate = {
       description: "Post-Match Interviews, Drone Coverage, Live Streaming",
       image: {
         src: "/images/corporate/content-coverage.jpg",
-        alt: "Aerial drone view of a turf football match at a Second Shift corporate event",
+        alt: "Post-match interview with a player in front of the Second Shift sponsor wall",
       },
     },
     {
@@ -256,7 +256,7 @@ export const corporate = {
       description: "A professionally produced short film capturing the event",
       image: {
         src: "/images/corporate/event-film.jpg",
-        alt: "Videographer filming players during a Second Shift corporate event",
+        alt: "Second Shift team posing together in front of the sponsor wall after a signature event",
       },
     },
   ],
@@ -401,7 +401,7 @@ export const socialProof = {
       title: "Bombay Shaving Company × Second Shift",
       views: "3.7M views",
       image: {
-        src: "/images/gallery/reel-bombay-shaving.jpg",
+        src: "/images/gallery/reel-bombay-shaving2.png",
         alt: "Preview frame from the Bombay Shaving Company x Second Shift Instagram reel",
       },
       href: "https://instagram.com/secondshift.club", // TODO: replace with direct reel URL
@@ -411,7 +411,7 @@ export const socialProof = {
       title: "Drone Compilation",
       views: "301K views",
       image: {
-        src: "/images/gallery/reel-drone-compilation.jpg",
+        src: "/images/gallery/reel-drone-compilation1.png",
         alt: "Aerial drone still of a Second Shift football match with birds flying over the pitch",
       },
       href: "https://instagram.com/secondshift.club", // TODO: replace with direct reel URL
@@ -421,7 +421,7 @@ export const socialProof = {
       title: "Sunday League Perks",
       views: "516K views",
       image: {
-        src: "/images/gallery/reel-sunday-league-perks.jpg",
+        src: "/images/gallery/reel-sunday-league-perks1.png",
         alt: "Second Shift players posing in front of the Sunday League banner",
       },
       href: "https://instagram.com/secondshift.club", // TODO: replace with direct reel URL
@@ -469,7 +469,7 @@ export const ourWork = {
   flagshipLabel: "OUR FLAGSHIP: THE SUNDAY LEAGUE",
   headline: "THE SUNDAY LEAGUE",
   subheadline:
-    "Rajasthan's leading multi-sport amateur league — Football, Cricket & Pickleball, built for working professionals who refuse to stop competing.",
+    "Curating sports experiences that bring people together — Football, Cricket & Pickleball, built for working professionals who refuse to stop competing.",
   format: {
     headline: "15 WEEKS. 3 SPORTS. ONE SEASON.",
     body:
@@ -488,7 +488,7 @@ export const ourWork = {
       body:
         "A professionally curated Weekend padel tournament by Second Shift, in collaboration with HEAD, bringing players together for a competitive and engaging sporting experience.",
       image: {
-        src: "/images/our-work/padel-open.jpg",
+        src: "/images/our-work/padel-open1.png",
         alt: "Padel Open 2026 winners holding their trophies and prize baskets on the Rally X padel court",
       },
     },
@@ -520,8 +520,8 @@ export const ourWork = {
     { src: "/images/gallery/football-tackle-2.jpg", alt: "Players challenging for the ball during a Second Shift football match" },
     { src: "/images/gallery/padel-back.jpg", alt: "Player holding a HEAD padel racquet, back view, on a purple padel court" },
     { src: "/images/gallery/padel-action.jpg", alt: "Two players running for the ball during a padel doubles match" },
-    { src: "/images/gallery/post-match-interview.jpg", alt: "Player of the Match being interviewed pitch-side after a Second Shift match" },
-    { src: "/images/gallery/goalkeeper-dive.jpg", alt: "Goalkeeper diving mid-air to make a save" },
+    { src: "/images/gallery/post-match-interview1.png", alt: "Player of the Match being interviewed pitch-side after a Second Shift match" },
+    { src: "/images/gallery/goalkeeper-dive1.png", alt: "Goalkeeper diving mid-air to make a save" },
   ],
 };
 

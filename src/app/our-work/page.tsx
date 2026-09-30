@@ -11,7 +11,7 @@ import { ourWork } from "@/data/content";
 export const metadata: Metadata = {
   title: "Our Work — Sports League Organisers in Jaipur",
   description:
-    "Our recent sports events: the Sunday League — Rajasthan's leading multi-sport amateur league — plus the Padel Open, a Round Table India cricket league and sports screening experiences curated by Second Shift.",
+    "Our recent sports events: the Sunday League — Curating sports experiences that bring people together — plus the Padel Open, a Round Table India cricket league and sports screening experiences curated by Second Shift.",
   alternates: { canonical: "/our-work" },
 };
 
