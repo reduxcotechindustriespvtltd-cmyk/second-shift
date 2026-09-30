@@ -7,13 +7,13 @@ import { OfferingsGrid } from "@/components/corporate/offerings-grid";
 import { ProcessTimeline } from "@/components/corporate/process-timeline";
 import { PackagesGrid } from "@/components/corporate/packages-grid";
 import { FaqAccordion } from "@/components/corporate/faq-accordion";
-import { CtaContact } from "@/components/sections/cta-contact";
+import { ChallengeSolution } from "@/components/corporate/challenge-solution";
 import { corporate } from "@/data/content";
 
 export const metadata: Metadata = {
-  title: "Corporate Sports Experiences",
+  title: "Corporate Sports Events & Team Building in Jaipur",
   description:
-    "End-to-end corporate sports experiences built for the modern workplace — in partnership with Rally. Planning, kits, F&B, content and a signature event film.",
+    "Corporate sports event management in Jaipur, Rajasthan — employee engagement activities, corporate sports days and inter-company tournaments, planned and executed end-to-end by Second Shift.",
 };
 
 export default function CorporatePage() {
@@ -32,11 +32,8 @@ export default function CorporatePage() {
             >
               {corporate.headline}
             </SectionHeading>
-            <p className="text-sm font-semibold uppercase tracking-widest text-off-white/50">
-              Second Shift <span className="text-warm-gold">×</span> {corporate.partner}
-            </p>
             <div>
-              <MagneticButton href="#contact" className="!bg-warm-gold !text-pure-black">
+              <MagneticButton href={corporate.cta.href} className="!bg-warm-gold !text-pure-black">
                 {corporate.cta.label}
               </MagneticButton>
             </div>
@@ -51,6 +48,10 @@ export default function CorporatePage() {
               className="object-cover"
             />
           </div>
+        </div>
+
+        <div className="mx-auto mt-14 max-w-7xl px-5 sm:px-8">
+          <ChallengeSolution />
         </div>
       </section>
 
@@ -79,7 +80,7 @@ export default function CorporatePage() {
           </SectionHeading>
           <p className="mb-12 max-w-xl text-sm text-off-white/50">
             Every league is tailored, but here&apos;s the shape most companies choose from.
-            {/* TODO: confirm final package names, inclusions and pricing */}
+            {/* TODO: confirm final pricing for each package */}
           </p>
           <PackagesGrid />
         </div>
@@ -99,8 +100,6 @@ export default function CorporatePage() {
           &ldquo;{corporate.closingLine}&rdquo;
         </p>
       </section>
-
-      <CtaContact />
     </>
   );
 }

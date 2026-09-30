@@ -61,9 +61,19 @@ export function Footer() {
             <ul className="flex flex-col gap-3 text-sm text-off-white/70">
               <li>{site.location}</li>
               <li>
+                <a href={site.phoneHref} className="transition-colors hover:text-volt">
+                  {site.phone}
+                </a>
+              </li>
+              <li>
                 <a href={`mailto:${site.email}`} className="transition-colors hover:text-volt">
                   {site.email}
                 </a>
+              </li>
+              <li>
+                <Link href="/terms" className="transition-colors hover:text-volt">
+                  Terms &amp; Privacy
+                </Link>
               </li>
               <li className="flex items-center gap-2 pt-1 text-xs uppercase tracking-wide text-off-white/40">
                 <SlashMark bars={3} className="scale-75" />
@@ -79,8 +89,8 @@ export function Footer() {
         </div>
       </div>
 
-      <div aria-hidden="true" className="select-none overflow-hidden pb-4 pt-6">
-        <span className="font-display block whitespace-nowrap text-center text-[18vw] font-black uppercase leading-none text-outline text-off-white/10 sm:text-[16vw]">
+      <div aria-hidden="true" className="select-none overflow-hidden pb-2 pt-4">
+        <span className="font-display block whitespace-nowrap text-center text-[9vw] font-black uppercase leading-none text-outline text-off-white/25 sm:text-[7vw]">
           Second Shift
         </span>
       </div>

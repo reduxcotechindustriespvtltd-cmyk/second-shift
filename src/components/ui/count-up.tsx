@@ -23,8 +23,8 @@ export function CountUp({
     if (!isInView) return;
 
     if (prefersReducedMotion) {
-      setDisplay(value);
-      return;
+      const raf = requestAnimationFrame(() => setDisplay(value));
+      return () => cancelAnimationFrame(raf);
     }
 
     const controls = animate(0, value, {

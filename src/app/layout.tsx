@@ -21,26 +21,39 @@ const spaceGrotesk = Space_Grotesk({
   weight: ["400", "500", "600", "700"],
 });
 
+const defaultTitle = "Second Shift | Sports Event Company in Jaipur, Rajasthan";
+const defaultDescription =
+  "Second Shift is a sports event management company in Jaipur running corporate sports events, private leagues & tournaments, and the Sunday League — Rajasthan's leading multi-sport amateur league across Football, Cricket & Pickleball.";
+
 export const metadata: Metadata = {
   metadataBase: new URL(site.url),
   title: {
-    default: "Second Shift | Corporate Sports & Sunday League, Rajasthan",
+    default: defaultTitle,
     template: "%s | Second Shift",
   },
-  description:
-    "Rajasthan's leading multi-sport amateur league for working professionals. Football, Cricket & Pickleball leagues and end-to-end corporate sports experiences.",
+  description: defaultDescription,
   keywords: [
-    "Second Shift",
-    "corporate sports Rajasthan",
-    "Sunday League",
-    "amateur football league",
-    "corporate sports events India",
-    "pickleball league Rajasthan",
+    "sports events company",
+    "corporate sports events",
+    "corporate sports event management",
+    "sports event management company",
+    "corporate sports tournaments",
+    "sports event company in Jaipur",
+    "corporate sports events in Jaipur",
+    "sports event management in Rajasthan",
+    "corporate team building activities in Jaipur",
+    "sports tournaments in Jaipur",
+    "employee engagement activities",
+    "corporate sports day",
+    "inter-company sports tournaments",
+    "sports league organisers",
+    "sports event planning and execution",
+    "sports brand activations",
+    "private sports tournament management",
   ],
   openGraph: {
-    title: "Second Shift | Corporate Sports & Sunday League, Rajasthan",
-    description:
-      "Rajasthan's leading multi-sport amateur league for working professionals. Football, Cricket & Pickleball leagues and end-to-end corporate sports experiences.",
+    title: defaultTitle,
+    description: defaultDescription,
     url: site.url,
     siteName: "Second Shift",
     locale: "en_IN",
@@ -48,9 +61,8 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "Second Shift | Corporate Sports & Sunday League, Rajasthan",
-    description:
-      "Rajasthan's leading multi-sport amateur league for working professionals.",
+    title: defaultTitle,
+    description: defaultDescription,
   },
 };
 
@@ -58,11 +70,17 @@ const jsonLd = {
   "@context": "https://schema.org",
   "@type": "SportsOrganization",
   name: "Second Shift",
-  description:
-    "Rajasthan's leading multi-sport amateur league for working professionals, and end-to-end corporate sports experiences.",
+  description: defaultDescription,
   url: site.url,
-  sport: ["Football", "Cricket", "Pickleball"],
-  areaServed: "Rajasthan, India",
+  telephone: site.phone,
+  sport: ["Football", "Cricket", "Pickleball", "Padel"],
+  address: {
+    "@type": "PostalAddress",
+    addressLocality: "Jaipur",
+    addressRegion: "Rajasthan",
+    addressCountry: "IN",
+  },
+  areaServed: "Jaipur, Rajasthan, India",
   sameAs: [site.instagram, site.linkedin],
 };
 

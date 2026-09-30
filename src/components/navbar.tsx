@@ -3,10 +3,10 @@
 import { useEffect, useState } from "react";
 import Link from "next/link";
 import { AnimatePresence, motion } from "framer-motion";
-import { Menu, X } from "lucide-react";
+import { Menu, X, ArrowUpRight } from "lucide-react";
 import { Logo } from "@/components/ui/logo";
 import { MagneticButton } from "@/components/ui/magnetic-button";
-import { nav, site } from "@/data/content";
+import { nav, navCta, site } from "@/data/content";
 import { cn } from "@/lib/utils";
 
 export function Navbar() {
@@ -34,7 +34,7 @@ export function Navbar() {
           "fixed inset-x-0 top-0 z-50 transition-all duration-300",
           scrolled
             ? "border-b border-white/10 bg-jet/80 backdrop-blur-lg"
-            : "bg-pure-black/55 backdrop-blur-[2px]",
+            : "bg-pure-black",
         )}
       >
         <nav className="mx-auto flex max-w-7xl items-center justify-between gap-4 px-5 py-4 sm:px-8">
@@ -56,8 +56,11 @@ export function Navbar() {
           </ul>
 
           <div className="hidden shrink-0 xl:block">
-            <MagneticButton href="/corporate#contact" className="!px-5 !py-3 !text-[0.65rem] whitespace-nowrap">
-              Book a Corporate Event
+            <MagneticButton href={navCta.href} className="!px-5 !py-3 !text-[0.65rem] whitespace-nowrap">
+              <span className="inline-flex items-center gap-1.5">
+                {navCta.label}
+                <ArrowUpRight className="h-3.5 w-3.5" />
+              </span>
             </MagneticButton>
           </div>
 
@@ -82,7 +85,7 @@ export function Navbar() {
             transition={{ duration: 0.6, ease: [0.16, 1, 0.3, 1] }}
             className="fixed inset-0 z-40 flex flex-col justify-center bg-pure-black px-8 xl:hidden"
           >
-            <ul className="flex flex-col gap-2">
+            <ul className="flex flex-col gap-1">
               {nav.map((item, i) => (
                 <motion.li
                   key={item.href}
@@ -93,7 +96,7 @@ export function Navbar() {
                   <Link
                     href={item.href}
                     onClick={() => setOpen(false)}
-                    className="font-display block py-2 text-5xl font-black uppercase leading-tight text-off-white transition-colors hover:text-volt sm:text-6xl"
+                    className="font-display block py-2 text-4xl font-black uppercase leading-tight text-off-white transition-colors hover:text-volt sm:text-5xl"
                   >
                     {item.label}
                   </Link>
@@ -103,11 +106,11 @@ export function Navbar() {
             <motion.div
               initial={{ y: 40, opacity: 0 }}
               animate={{ y: 0, opacity: 1 }}
-              transition={{ delay: 0.55, duration: 0.5 }}
-              className="mt-10 flex flex-col gap-4"
+              transition={{ delay: 0.5, duration: 0.5 }}
+              className="mt-8 flex flex-col gap-4"
             >
-              <MagneticButton href="/corporate#contact" onClick={() => setOpen(false)}>
-                Book a Corporate Event
+              <MagneticButton href={navCta.href} onClick={() => setOpen(false)}>
+                {navCta.label}
               </MagneticButton>
               <a
                 href={site.instagram}

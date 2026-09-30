@@ -4,7 +4,7 @@ import { useEffect, useState } from "react";
 import Image from "next/image";
 import { AnimatePresence, motion } from "framer-motion";
 import { X, ChevronLeft, ChevronRight } from "lucide-react";
-import { league } from "@/data/content";
+import { ourWork } from "@/data/content";
 
 export function GalleryLightbox() {
   const [activeIndex, setActiveIndex] = useState<number | null>(null);
@@ -13,7 +13,7 @@ export function GalleryLightbox() {
   const go = (dir: 1 | -1) =>
     setActiveIndex((prev) => {
       if (prev === null) return prev;
-      return (prev + dir + league.gallery.length) % league.gallery.length;
+      return (prev + dir + ourWork.gallery.length) % ourWork.gallery.length;
     });
 
   useEffect(() => {
@@ -34,7 +34,7 @@ export function GalleryLightbox() {
   return (
     <>
       <div className="grid grid-cols-2 gap-3 sm:grid-cols-3 lg:grid-cols-4">
-        {league.gallery.map((photo, i) => (
+        {ourWork.gallery.map((photo, i) => (
           <button
             key={photo.src}
             type="button"
@@ -91,8 +91,8 @@ export function GalleryLightbox() {
               className="relative aspect-[4/3] w-full max-w-3xl"
             >
               <Image
-                src={league.gallery[activeIndex].src}
-                alt={league.gallery[activeIndex].alt}
+                src={ourWork.gallery[activeIndex].src}
+                alt={ourWork.gallery[activeIndex].alt}
                 fill
                 sizes="90vw"
                 className="rounded-xl object-contain"

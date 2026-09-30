@@ -6,7 +6,7 @@ import {
   ClipboardList,
   MapPin,
   Settings2,
-  Smartphone,
+  Whistle,
   Sparkles,
   Users,
   type LucideIcon,
@@ -18,7 +18,7 @@ const icons: Record<string, LucideIcon> = {
   ClipboardList,
   MapPin,
   Settings2,
-  Smartphone,
+  Whistle,
   Sparkles,
   Users,
 };

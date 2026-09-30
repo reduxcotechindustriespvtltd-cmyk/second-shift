@@ -6,16 +6,16 @@ import { experience } from "@/data/content";
 
 export function Experience() {
   return (
-    <section className="relative overflow-hidden bg-volt py-24 text-pure-black sm:py-32">
-      <SlashMark color="black" className="absolute left-6 top-6 sm:left-10" />
-      <SlashMark color="black" className="absolute bottom-6 right-6 sm:bottom-10 sm:right-10" />
+    <section className="relative overflow-hidden bg-pure-black py-24 text-off-white sm:py-32">
+      <SlashMark className="absolute left-6 top-6 sm:left-10" />
+      <SlashMark className="absolute bottom-6 right-6 sm:bottom-10 sm:right-10" />
 
       <div className="mx-auto max-w-7xl px-5 sm:px-8">
         <div className="mb-14 max-w-3xl">
-          <SectionHeading className="font-display text-4xl font-black uppercase leading-[0.95] sm:text-5xl lg:text-6xl">
+          <SectionHeading className="font-display text-4xl font-black uppercase leading-[0.95] text-off-white sm:text-5xl lg:text-6xl">
             {experience.headline}
           </SectionHeading>
-          <p className="mt-5 text-base font-medium text-pure-black/70 sm:text-lg">
+          <p className="mt-5 text-base font-medium text-off-white/70 sm:text-lg">
             {experience.subline}
           </p>
         </div>
@@ -31,7 +31,7 @@ export function Experience() {
             />
           </div>
 
-          <div className="relative col-span-2 aspect-[4/3] overflow-hidden rounded-2xl border-4 border-pure-black sm:col-span-1 lg:col-span-3">
+          <div className="relative col-span-2 aspect-[4/3] overflow-hidden rounded-2xl border-2 border-volt sm:col-span-1 lg:col-span-3">
             <Image
               src={experience.images.trophy.src}
               alt={experience.images.trophy.alt}

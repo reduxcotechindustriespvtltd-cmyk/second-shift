@@ -10,6 +10,9 @@ export function SocialProof() {
   return (
     <section className="relative bg-jet py-24 sm:py-32">
       <div className="mx-auto max-w-7xl px-5 sm:px-8">
+        <span className="mb-4 block text-xs font-semibold uppercase tracking-[0.2em] text-off-white/40 sm:text-sm">
+          {socialProof.eyebrow}
+        </span>
         <SectionHeading className="font-display mb-14 max-w-4xl text-3xl font-black uppercase leading-[1.1] text-off-white sm:text-5xl">
           {socialProof.headline}
         </SectionHeading>

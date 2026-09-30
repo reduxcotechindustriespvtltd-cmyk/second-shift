@@ -9,7 +9,7 @@ export function Stats() {
         <div className="mb-14 flex items-center gap-3">
           <SlashMark />
           <h2 className="text-xs font-semibold uppercase tracking-[0.2em] text-off-white/60 sm:text-sm">
-            {stats.headline}
+            {stats.eyebrow} | {stats.headline}
           </h2>
         </div>
 

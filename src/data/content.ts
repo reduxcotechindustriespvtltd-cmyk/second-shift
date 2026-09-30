@@ -12,63 +12,100 @@ export const site = {
     "Turning sport into stronger teams and a more connected workplace.",
   url: "https://secondshiftclub.com",
   webApp: "https://app.secondshiftclub.com/",
-  location: "Rajasthan, India",
-  email: "hello@secondshiftclub.com", // TODO: replace with real inbox
-  whatsapp: "https://wa.me/919999999999", // TODO: replace with real WhatsApp number
+  location: "Jaipur, Rajasthan",
+  email: "hello@secondshiftclub.com", // TODO: replace once the new domain/inbox is live
+  phone: "+91 72970 91286",
+  phoneHref: "tel:+917297091286",
+  whatsapp: "https://wa.me/917297091286",
   instagram: "https://instagram.com/secondshift.club",
   linkedin: "https://linkedin.com/company/secondshift.co", // TODO: confirm real LinkedIn URL
 };
 
+// Only 5 primary nav items, per the latest IA — the last one is styled as
+// the header's CTA pill rather than a plain text link.
 export const nav = [
-  { label: "About", href: "/#about" },
-  { label: "Sunday League", href: "/league" },
+  { label: "About", href: "/about" },
+  { label: "Our Work", href: "/our-work" },
   { label: "Corporate", href: "/corporate" },
-  { label: "App", href: "/#app" },
-  { label: "Partners", href: "/#partners" },
-  { label: "Contact", href: "/#contact" },
+  { label: "Dashboard", href: "/dashboard" },
 ];
 
+export const navCta = { label: "Let's Plan Your Event", href: "/plan-your-event" };
+
 export const hero = {
-  tag: "SECOND SHIFT | SUNDAY LEAGUE | PROVEN SPORTS ECOSYSTEM",
+  tag: "SPORTS, CURATED FOR EVERY OCCASION.",
   headline: ["COMPETE.", "CONNECT.", "BELONG."],
   subheadline:
     "Rajasthan's leading multi-sport amateur league, bringing working professionals together through Football, Cricket & Pickleball.",
-  ctaPrimary: { label: "Join the League", href: "/league" },
-  ctaSecondary: { label: "Partner With Us", href: "/corporate" },
-  image: {
-    src: "/images/sports/football-action.jpg",
-    alt: "Second Shift player striking the ball mid-action on a Sunday League football pitch",
-  },
+  cta: { label: "Partner With Us", href: "/corporate" },
+  // Rotating hero slides — image + label crossfade together every few seconds.
+  slides: [
+    {
+      label: "Football",
+      image: {
+        src: "/images/sports/football-action.jpg",
+        alt: "Second Shift player striking the ball mid-action on a Sunday League football pitch",
+      },
+    },
+    {
+      label: "Cricket",
+      image: {
+        src: "/images/sports/cricket-players.jpg",
+        alt: "Two Second Shift cricketers talking mid-pitch during a night match",
+      },
+    },
+    {
+      label: "Pickleball",
+      image: {
+        src: "/images/sports/pickleball-action.jpg",
+        alt: "Two Second Shift players at the net during a pickleball doubles match",
+      },
+    },
+    {
+      label: "Padel",
+      image: {
+        src: "/images/our-work/padel-open.jpg",
+        alt: "Padel Open 2026 winners holding their trophies on the Rally X padel court",
+      },
+    },
+  ],
   marquee: [
-    "FOOTBALL",
-    "CRICKET",
-    "PICKLEBALL",
+    "CORPORATE SPORTS EVENTS",
+    "LEAGUES & TOURNAMENTS",
+    "SPORTS EXPERIENCES",
     "COMMUNITY",
-    "CORPORATE SPORTS",
   ],
 };
 
+export const moreThanSport = {
+  eyebrow: "SPORTS EVENT COMPANY · JAIPUR, RAJASTHAN",
+  headline: "MORE THAN JUST SPORT.",
+  body:
+    "We're Second Shift, a sports events and experiences company bringing people together through sport. From corporate events and tournaments to community-led leagues, we create opportunities for people to connect, compete and rediscover their love for the game.",
+};
+
 export const stats = {
+  eyebrow: "PROOF ON THE GROUND",
   headline: "NUMBERS THAT SPEAK FOR THEMSELVES",
   primary: [
     { value: 5, suffix: "M+", label: "Social Media Views" },
-    { value: 300, suffix: "+", label: "Athletes Onboarded" },
-    { value: 160, suffix: "+", label: "Matches Conducted" },
+    { value: 350, suffix: "+", label: "Players Onboarded" },
+    { value: 200, suffix: "+", label: "Matches Conducted" },
     { value: 10, suffix: "+", label: "Sponsors Backing Us" },
   ],
   secondary: [
-    "3 Sports | 3 Leagues | 1 Community",
-    "Ages 20 to 45",
-    "15-Week Consecutive League",
+    "Sports Experiences",
+    "Curation",
+    "End to End Execution",
     "3000+ Social Community",
   ],
 };
 
 export const about = {
   tag: "THE SUNDAY LEAGUE - WHERE IT ALL BEGAN",
-  headline: "BUILDING A COMMUNITY THROUGH COMPETITIVE AMATEUR SPORT.",
+  headline: "SPORTS, CURATED FOR EVERY OCCASION.",
   body:
-    "It started as a way for working professionals to trade the 9-to-6 for a Sunday morning kickabout — a break from the desk, a reason to move, a team to belong to. What began as one football game between friends has grown into Rajasthan's leading multi-sport amateur league: three sports, three leagues, one community that keeps showing up, season after season.",
+    "From corporate sports days and competitive leagues to community tournaments and brand experiences, we bring people together through amateur sport. We create opportunities to play, compete and connect, building stronger communities through shared experiences on and off the field. From planning to execution, every detail is thoughtfully curated to make sport more accessible, engaging and enjoyable.",
   images: {
     goalkeeper: {
       src: "/images/gallery/goalkeeper-dive.jpg",
@@ -85,8 +122,8 @@ export const about = {
   },
 };
 
+// Used by the "Our Work" flagship widget (tap to switch between sports).
 export const sports = {
-  headline: "300 ATHLETES. ONE COMMUNITY. ENDLESS MEMORIES.",
   list: [
     {
       key: "football",
@@ -122,14 +159,14 @@ export const sports = {
 };
 
 export const execution = {
-  tag: "FROM CONCEPT TO COMPETITION. END-TO-END EXECUTION.",
   headline: "FROM CONCEPT TO COMPETITION. END-TO-END EXECUTION.",
-  subheadline: "Planning, venues, operations, technology, branding & on-ground management.",
+  subheadline:
+    "From event planning and venue management to operations, merchandise, on-ground branding and officials, we handle every detail from Curation to Execution.",
   capabilities: [
     { key: "planning", label: "Planning", icon: "ClipboardList" },
     { key: "venues", label: "Venues", icon: "MapPin" },
     { key: "operations", label: "Operations", icon: "Settings2" },
-    { key: "technology", label: "Technology", icon: "Smartphone" },
+    { key: "matchOfficials", label: "Match Officials", icon: "Whistle" },
     { key: "branding", label: "Branding", icon: "Sparkles" },
     { key: "onGround", label: "On-Ground Management", icon: "Users" },
   ],
@@ -139,8 +176,8 @@ export const execution = {
       alt: "Red Bull branded activation car with a giant can rig at a Second Shift event",
     },
     {
-      src: "/images/corporate/hydrofuel-activation.jpg",
-      alt: "Hydrofuel sponsor hydration stall set up at a Second Shift event",
+      src: "/images/corporate/hydration-station.jpg",
+      alt: "Branded Second Shift hydration station with water bottles at a corporate sports event",
     },
   ],
 };
@@ -148,7 +185,7 @@ export const execution = {
 export const experience = {
   headline: "THE EXPERIENCE BEYOND THE GAME",
   subline:
-    "Community, engagement, content, food, music, branding & memorable moments.",
+    "From live DJ sets and commentary to food, beverages and branded hydration stations, we curate every detail to make the experience memorable, both on and off the field.",
   badge: "MEMORIES CREATED",
   images: {
     action: {
@@ -169,12 +206,21 @@ export const experience = {
 export const corporate = {
   label: "TAILORED CORPORATE SPORTS",
   headline: "END-TO-END SPORTS EXPERIENCES, BUILT FOR THE MODERN WORKPLACE.",
-  partner: "RALLY",
   closingLine: "A SIGNATURE EXPERIENCE, DELIVERED WITHOUT COMPROMISE.",
-  cta: { label: "Plan Your Corporate League", href: "/corporate#contact" },
+  cta: { label: "Let's Plan Your Event", href: "/plan-your-event" },
   heroImage: {
     src: "/images/corporate/corporate-action-hero.jpg",
-    alt: "Second Shift corporate sports player sprinting on a turf pitch, presented in partnership with Rally",
+    alt: "Second Shift corporate sports player sprinting on a turf pitch during a corporate sports event",
+  },
+  challenge: {
+    eyebrow: "THE CHALLENGE",
+    heading: "EMPLOYEE ATTRITION & DISCONNECTION",
+    body: "With SHRM reporting a 12% median annual voluntary attrition rate, employee engagement and strong team connections remain important workplace priorities.",
+  },
+  solution: {
+    eyebrow: "OUR SOLUTION",
+    heading: "BUILD STRONGER TEAMS THROUGH SPORT",
+    body: "Curated sporting experiences that bring employees together, encourage engagement and strengthen workplace connections.",
   },
   offerings: [
     {
@@ -192,14 +238,13 @@ export const corporate = {
       description: "Live Food Counters, Wider Variety of Options, Dinner",
       image: {
         src: "/images/corporate/fnb-experience.jpg",
-        alt: "Live food counters and festive tents set up at a Second Shift corporate event",
+        alt: "Branded food stall and hospitality setup at a Second Shift corporate event",
       },
     },
     {
       key: "content",
       title: "Professional Content & Coverage",
-      description:
-        "Post-Match Interviews, Drone Coverage, Live Streaming",
+      description: "Post-Match Interviews, Drone Coverage, Live Streaming",
       image: {
         src: "/images/corporate/content-coverage.jpg",
         alt: "Aerial drone view of a turf football match at a Second Shift corporate event",
@@ -249,44 +294,54 @@ export const corporate = {
   ],
   packages: [
     {
-      key: "starter",
-      name: "Starter League",
-      description: "A single-sport league for one company, built for team bonding.",
-      features: ["1 sport", "Up to 8 teams", "Standard kit", "Digital fixtures & standings"],
-    },
-    {
-      key: "signature",
-      name: "Signature League",
-      description: "Our most popular format — multi-sport, multi-week, fully branded.",
-      features: [
-        "2–3 sports",
-        "Up to 16 teams",
-        "Complete player welcome kit",
-        "Live content & coverage",
+      key: "silver",
+      tier: "Silver Package",
+      name: "The Essential Sports Experience",
+      note: "We can curate any sporting experience according to your requirement.",
+      includesNote: null,
+      categories: [
+        { title: "Sports & Operations", items: ["Formats", "Scheduling", "Scoring", "Umpires", "Referee", "Commentator"] },
+        { title: "F&B", items: ["Hydration", "Snacks", "Breakfast", "Lunch", "High Tea"] },
+        { title: "On-Ground Branding", items: ["Banners", "Standees", "Court-Side & Company Branding"] },
+        { title: "Content & Technology", items: ["Photography", "Social Content", "DJ", "Sports Anchor"] },
+        { title: "Manpower & Execution", items: ["Support Staff", "Event Operations", "End-to-End Execution"] },
+        { title: "Ceremony & Engagement", items: ["Closing Ceremony", "Trophies", "Prizes", "Goodies", "Recognition"] },
       ],
     },
     {
-      key: "enterprise",
-      name: "Enterprise Championship",
-      description: "A flagship, multi-company tournament with full production value.",
-      features: [
-        "Multi-sport championship",
-        "Unlimited teams",
-        "Drone + signature event film",
-        "Full sponsor activation management",
+      key: "gold",
+      tier: "Gold Package",
+      name: "Elevated Experience",
+      note: null,
+      includesNote: "Includes everything from the Silver package, plus the following add-ons:",
+      categories: [
+        { title: "Digital Experience", items: ["Web App", "Live Scoreboards", "Digital Fixtures & Results"] },
+        { title: "Player Experience", items: ["Custom Team Jerseys & Player Merchandise"] },
+        { title: "Premium Branding", items: ["Photobooth", "Branded Entry Arch", "Backdrop Wall"] },
+        { title: "Enhanced Content", items: ["Multiple Photographers", "GoPro Shots", "Full Event Coverage"] },
+        { title: "Player Recognition", items: ["Man of the Match Awards Every Game", "Individual Recognition"] },
+        { title: "Rewards", items: ["Premium Prizes & Goodies", "Enhanced Closing Ceremony"] },
       ],
     },
-  ], // TODO: confirm final package names, inclusions and pricing
+    {
+      key: "platinum",
+      tier: "Platinum Package",
+      name: "Ultimate Corporate Sports Experience",
+      note: null,
+      includesNote: "Includes everything from the Silver & Gold package, plus the following add-ons:",
+      categories: [
+        { title: "Complete Player Welcome Kit", items: ["T-Shirt", "Cap", "Tote Bag", "Sweatband", "Hand Towel"] },
+        { title: "Elevated F&B Experience", items: ["Live Food Counters", "Wider Variety of Options", "Dinner"] },
+        { title: "Professional Content & Coverage", items: ["Professional Post-Match Interviews", "Drone Coverage", "Live Streaming"] },
+        { title: "Signature Event Film", items: ["Professionally Produced Short Film Capturing the Event"] },
+      ],
+    },
+  ], // TODO: confirm final pricing for each package
   faqs: [
     {
       question: "How many employees do we need to take part?",
       answer:
-        "We've run leagues for teams as small as 40 people and as large as 300+. We'll help you structure the right format for your headcount.",
-    },
-    {
-      question: "Can we mix sports within one corporate league?",
-      answer:
-        "Yes — most of our corporate leagues run Football, Cricket and Pickleball in parallel so every kind of employee has a way to get involved.",
+        "We can run leagues for teams as small as 50 people and as large as 500+ headcount. We'll help you structure the right format either way.",
     },
     {
       question: "Do you handle venues and equipment?",
@@ -294,9 +349,9 @@ export const corporate = {
         "Completely. Venue booking, turf, nets, balls, scoring, referees — it's all part of our end-to-end execution.",
     },
     {
-      question: "What's the typical lead time to plan a corporate league?",
+      question: "What's the typical lead time to plan a corporate event?",
       answer:
-        "We recommend 3–4 weeks for a single-day tournament and 6–8 weeks for a multi-week league, though we've turned things around faster.",
+        "We recommend 3–4 weeks for a 2-day event and 5–6 weeks for a multi-week league, though we've turned things around faster when needed.",
     },
     {
       question: "Can sponsors be involved in our corporate event?",
@@ -306,46 +361,39 @@ export const corporate = {
   ],
 };
 
-export const digitalLayer = {
+export const dashboard = {
   headline: "THE DIGITAL LAYER BEHIND THE LEAGUE",
   features: [
-    "Live fixtures",
-    "Real-time standings",
-    "Match results",
-    "Player profiles",
+    "Live Fixtures",
+    "LeaderBoard",
+    "Scoring",
+    "Match Results",
+    "Individual Stats",
+    "Player Profiles",
   ],
-  cta: { label: "Visit the Web App", href: "https://app.secondshiftclub.com/" },
-  fixtures: [
-    { home: "Pew Pew FC", away: "Penaldo FC", time: "23 AUG · 07:00" },
-    { home: "Super Xaviers", away: "Retired FC", time: "23 AUG · 07:50" },
-    { home: "Sporting Boys", away: "Power Rangers", time: "23 AUG · 07:50" },
-    { home: "Old Guards FC", away: "MSMSV FC", time: "23 AUG · 08:40" },
-    { home: "Naga Union FC", away: "Kryptonite FC", time: "23 AUG · 08:40" },
-  ],
-  standings: [
-    { pos: 1, team: "Darbar 11", p: 7, w: 7, d: 0, l: 0, pts: 14 },
-    { pos: 2, team: "Kaint Krew", p: 7, w: 6, d: 0, l: 1, pts: 12 },
-    { pos: 3, team: "SORT", p: 7, w: 5, d: 0, l: 2, pts: 10 },
-    { pos: 4, team: "Nicotine Ninjas", p: 7, w: 3, d: 0, l: 4, pts: 6 },
-    { pos: 5, team: "SMC", p: 7, w: 3, d: 0, l: 4, pts: 6 },
-    { pos: 6, team: "Lawyers XI", p: 7, w: 2, d: 0, l: 5, pts: 4 },
-    { pos: 7, team: "Third Shift", p: 7, w: 1, d: 0, l: 6, pts: 2 },
-    { pos: 8, team: "Hydro Daddies", p: 7, w: 1, d: 0, l: 6, pts: 2 },
-  ],
-  upcomingMatch: {
-    sport: "FOOTBALL",
-    date: "SUN 23 AUG · 09:30 AM",
-    home: { code: "LST", captain: "Ananya Shukla" },
-    away: { code: "LB", captain: "Ayush Chandwani" },
-    ground: "Ground 1",
-  },
-  previousScores: [
-    { home: "TS", homeScore: "60/6", away: "DAR", awayScore: "81/2", date: "09 AUG · 22:00" },
-    { home: "KK", homeScore: "114/5", away: "HD", awayScore: "51/6", date: "09 AUG · 21:00" },
+  screenshots: [
+    {
+      src: "/images/dashboard/home.jpg",
+      alt: "Second Shift club page in the app showing the Padel Open 2026 tournament summary",
+    },
+    {
+      src: "/images/dashboard/standings.jpg",
+      alt: "Padel Open 2026 standings screen with Group A and Group B tables",
+    },
+    {
+      src: "/images/dashboard/matches.jpg",
+      alt: "Padel Open 2026 matches screen with fixtures and results by date",
+    },
   ],
 };
 
+export const appDownload = {
+  ios: "https://apps.apple.com/in/app/swing-house-of-sports/id6788461449",
+  android: "https://play.google.com/store/apps/details?id=com.ios.swing&pcampaignid=web_share",
+};
+
 export const socialProof = {
+  eyebrow: "SOCIAL MEDIA PRESENCE",
   headline: "5M+ DIGITAL IMPRESSIONS | 3000+ SOCIAL COMMUNITY",
   reels: [
     {
@@ -400,33 +448,32 @@ export const partners = {
 
 export const testimonials = [
   {
-    quote:
-      "TODO: Replace with a real quote from a Second Shift player about what the Sunday League means to them.",
-    name: "Player Name", // TODO
-    role: "Sunday League Player", // TODO
+    quote: "Great competition, great people, and an even better community.",
+    name: "Rudraveer",
+    role: "Sunday League Player",
   },
   {
-    quote:
-      "TODO: Replace with a real quote from an HR/People lead about running a corporate event with Second Shift.",
-    name: "HR Lead Name", // TODO
-    role: "HR Head, Company Name", // TODO
+    quote: "A seamless experience that brought our team closer.",
+    name: "Yuvraj",
+    role: "Round Table India",
   },
   {
-    quote:
-      "TODO: Replace with a real quote from a sponsor/brand partner about activating with Second Shift.",
-    name: "Brand Manager Name", // TODO
-    role: "Brand Manager, Sponsor Name", // TODO
+    quote: "An energetic event and a great partnership with Second Shift.",
+    name: "Rohitansh",
+    role: "Red Bull",
   },
 ];
 
-export const league = {
+export const ourWork = {
+  topHeadline: "OUR RECENT SPORTS EVENTS",
+  flagshipLabel: "OUR FLAGSHIP: THE SUNDAY LEAGUE",
   headline: "THE SUNDAY LEAGUE",
   subheadline:
     "Rajasthan's leading multi-sport amateur league — Football, Cricket & Pickleball, built for working professionals who refuse to stop competing.",
   format: {
     headline: "15 WEEKS. 3 SPORTS. ONE SEASON.",
     body:
-      "Every season runs for 15 consecutive weeks across Football, Cricket and Pickleball. Teams are drafted from the community, fixtures run every Sunday, and the season builds to a live finals day with a podium, medals and bragging rights.",
+      "Our flagship amateur sports league brings working professionals together through 15 weeks of organised competition across football, cricket and pickleball. From team drafts and weekly fixtures to match-day operations and a live finals day, we manage the experience from start to finish.",
     points: [
       "15-week consecutive league format",
       "Football, Cricket & Pickleball run in parallel",
@@ -434,39 +481,270 @@ export const league = {
       "Live fixtures & standings on the Second Shift web app",
     ],
   },
-  registerSteps: [
-    { step: "01", title: "Apply", description: "Fill out the registration form with your details and preferred sport(s)." },
-    { step: "02", title: "Get Drafted", description: "We slot you into a team based on skill level, schedule and sport." },
-    { step: "03", title: "Play Every Sunday", description: "Show up, compete, and track your team's progress on the app." },
-    { step: "04", title: "Battle for the Podium", description: "Top teams advance to finals day for medals and glory." },
+  curatedExperiences: [
+    {
+      key: "padel",
+      title: "Padel Open",
+      body:
+        "A professionally curated Weekend padel tournament by Second Shift, in collaboration with HEAD, bringing players together for a competitive and engaging sporting experience.",
+      image: {
+        src: "/images/our-work/padel-open.jpg",
+        alt: "Padel Open 2026 winners holding their trophies and prize baskets on the Rally X padel court",
+      },
+    },
+    {
+      key: "round-table",
+      title: "Cricket League Curated for Round Table",
+      body:
+        "A 2 day box cricket event organised by Second Shift for Round Table India, delivering a seamless and engaging sporting experience from format to execution.",
+      image: {
+        src: "/images/our-work/round-table-cricket.jpg",
+        alt: "Round Table India cricket teams mingling on the pitch after a Second Shift curated match",
+      },
+    },
+    {
+      key: "screening",
+      title: "Sports Screening Experience",
+      body:
+        "A sports screening experience curated by Second Shift, bringing the community together to watch, connect and celebrate the game.",
+      image: {
+        src: "/images/our-work/sports-screening.jpg",
+        alt: "Outdoor sports screening event with a big screen showing a live match to the community",
+      },
+    },
   ],
   gallery: [
+    { src: "/images/gallery/pickleball-champions-banner.jpg", alt: "Sunday League Season 1 Pickleball Champions with the winners banner" },
+    { src: "/images/gallery/pickleball-runnerup.jpg", alt: "Pickleball doubles runner-up pair holding their trophies and prize baskets" },
+    { src: "/images/gallery/football-contest.jpg", alt: "Three players contesting the ball during a Second Shift football match" },
+    { src: "/images/gallery/football-tackle-2.jpg", alt: "Players challenging for the ball during a Second Shift football match" },
+    { src: "/images/gallery/padel-back.jpg", alt: "Player holding a HEAD padel racquet, back view, on a purple padel court" },
+    { src: "/images/gallery/padel-action.jpg", alt: "Two players running for the ball during a padel doubles match" },
+    { src: "/images/gallery/post-match-interview.jpg", alt: "Player of the Match being interviewed pitch-side after a Second Shift match" },
     { src: "/images/gallery/goalkeeper-dive.jpg", alt: "Goalkeeper diving mid-air to make a save" },
-    { src: "/images/gallery/team-picnic-celebration.jpg", alt: "Team celebrating together after a match" },
-    { src: "/images/gallery/team-sponsor-wall.png", alt: "Team posing at the sponsor step-and-repeat wall" },
-    { src: "/images/gallery/player-of-the-match.jpg", alt: "Player holding the Player of the Match trophy" },
-    { src: "/images/gallery/pickleball-champion-podium.jpg", alt: "Season 1 Pickleball Champions on the podium" },
-    { src: "/images/sports/football-action.jpg", alt: "Player striking the ball during a football match" },
-    { src: "/images/sports/cricket-players.jpg", alt: "Two cricketers talking mid-pitch" },
-    { src: "/images/sports/pickleball-action.jpg", alt: "Two players at the net during a pickleball match" },
   ],
+};
+
+export const planEvent = {
+  headline: "READY TO PLAY YOUR SECOND SHIFT?",
+  subheadline: "Tell us what you're planning and we'll take it from there.",
+  cta: { label: "Host Your Sports Event", href: "#contact-form" },
 };
 
 export const contactForm = {
   interests: [
-    "Join League",
-    "Corporate Event",
-    "Sponsorship",
-    "Other",
+    "Corporate Events",
+    "Private Leagues & Tournaments",
+    "Sports Entertainment",
+    "Sponsorships",
+    "Others",
   ],
 };
 
 export const footerLinks = {
   quickLinks: [
-    { label: "About", href: "/#about" },
-    { label: "Sunday League", href: "/league" },
+    { label: "About", href: "/about" },
+    { label: "Our Work", href: "/our-work" },
     { label: "Corporate", href: "/corporate" },
+    { label: "Dashboard", href: "/dashboard" },
     { label: "Web App", href: "https://app.secondshiftclub.com/" },
-    { label: "Contact", href: "/#contact" },
+    { label: "Let's Plan Your Event", href: "/plan-your-event" },
   ],
+  legalLinks: [
+    { label: "Terms of Use", href: "/terms" },
+    { label: "Privacy Policy", href: "/privacy-policy" },
+    { label: "Cookie Policy", href: "/cookie-policy" },
+    { label: "Refund Policy", href: "/refund-policy" },
+  ],
+};
+
+// Shared header info for every legal/policy page.
+export const legalMeta = {
+  entity: "Sporting Revolution Ventures LLP (Second Shift)",
+  effectiveDate: "28 September 2026",
+  contactEmail: "shiftsecond287@gmail.com",
+};
+
+export const termsOfUse = {
+  title: "Terms of Use",
+  intro:
+    "Welcome to Second Shift. By accessing our website, registering for an event or engaging our services, you agree to the following terms. These terms apply to your use of the Second Shift website, digital platform and services, including event registrations, sports experiences, tournaments and corporate event enquiries.",
+  sections: [
+        {
+          heading: "01. Our Services",
+          body: "Second Shift provides sports event planning, curation, coordination and execution services, including corporate sports events, tournaments, leagues, brand activations and community sporting experiences. Specific services and deliverables will be agreed upon separately with each client or participant.",
+        },
+        {
+          heading: "02. Registration & Participation",
+          body: "Participants must provide accurate registration details and meet the eligibility requirements specified for each event. Registration is subject to availability and is confirmed only upon completion of the applicable payment and registration process.",
+        },
+        {
+          heading: "03. Event Planning & Changes",
+          body: "Event formats, schedules, venues, fixtures and activities may be modified where necessary due to operational requirements, weather, safety considerations or other unforeseen circumstances. We will make reasonable efforts to communicate significant changes to affected participants and clients.",
+        },
+        {
+          heading: "04. Conduct & Fair Play",
+          body: "All participants are expected to demonstrate respect, sportsmanship and appropriate conduct. Harassment, abuse, discrimination, violence or unsportsmanlike behaviour may result in removal from an event without a refund, subject to the applicable event terms.",
+        },
+        {
+          heading: "05. Health & Safety",
+          body: "Participants are responsible for ensuring that they are physically fit to take part in their chosen activities and for following event safety instructions. Any known medical or safety concerns relevant to participation should be disclosed to the event organisers. Participants must use the required safety equipment and comply with venue rules.",
+        },
+        {
+          heading: "06. Event Photography & Media",
+          body: "We may capture photographs, videos and other media during events for documentation, portfolio, marketing and promotional purposes. Where required, we will seek appropriate consent from individuals before using identifiable images or footage, particularly where minors are involved. Participants may contact us regarding media use or concerns.",
+        },
+        {
+          heading: "07. Personal Belongings",
+          body: "Participants are responsible for their personal belongings and sporting equipment during events. We will take reasonable care in managing event facilities but are not responsible for loss, theft or damage, except where liability cannot legally be excluded.",
+        },
+        {
+          heading: "08. Right to Refuse Participation",
+          body: "We reserve the right to refuse or discontinue participation where necessary to protect the safety, integrity and smooth operation of an event, in accordance with applicable law and the relevant event terms.",
+        },
+        {
+          heading: "09. Client Engagements & Deliverables",
+          body: "Corporate events, brand partnerships and private tournaments may be governed by separate proposals, agreements, quotations or statements of work. The agreed scope, deliverables, fees, payment schedules and cancellation conditions in those documents will apply to the relevant engagement.",
+        },
+        {
+          heading: "10. Website & Intellectual Property",
+          body: "All original website content, branding, logos, designs, photographs and other materials owned by Second Shift are protected by applicable intellectual property laws. They may not be copied, reproduced or commercially used without prior written permission. Third-party names and marks remain the property of their respective owners.",
+        },
+        {
+          heading: "11. Limitation of Liability",
+          body: "To the extent permitted by applicable law, Second Shift will not be liable for indirect or consequential losses arising from participation in events or use of our website. Nothing in these terms excludes liability that cannot legally be excluded, including liability arising from negligence where exclusion is prohibited by law.",
+        },
+        {
+          heading: "12. Contact & Updates",
+          body: "We may update these terms from time to time to reflect changes in our services, operations or applicable laws. Updated terms will be published on our website with a revised effective date. Continued use of the website or services after changes take effect constitutes acceptance where legally permitted.",
+        },
+      ],
+};
+
+export const privacyPolicy = {
+  title: "Privacy Policy",
+  intro:
+    "We respect your privacy and are committed to handling your personal information responsibly. This policy explains what information we collect, how we use it and the choices available to you.",
+  sections: [
+        {
+          heading: "01. Information We Collect",
+          body: "Depending on how you interact with us, we may collect your name, phone number, email address, event registration details, payment status and other information you voluntarily provide through our website, forms or digital platform.",
+        },
+        {
+          heading: "02. How We Use Your Information",
+          body: "We use your information to: process event registrations and manage participation; coordinate events, schedules, fixtures and announcements; respond to enquiries from participants, corporate clients and partners; improve our website, digital platform and event experiences; and send promotional updates where you have agreed to receive them.",
+        },
+        {
+          heading: "03. Payments",
+          body: "Payments may be processed through third-party payment providers. We do not intend to collect or store your full payment card details through our website. Payment providers may process your information under their own privacy policies and terms.",
+        },
+        {
+          heading: "04. Sharing of Information",
+          body: "We do not sell your personal information. We may share relevant information with trusted service providers, event venues, operational partners or payment processors where necessary to deliver our services. We may also disclose information where required by law.",
+        },
+        {
+          heading: "05. Photography & Event Media",
+          body: "Photographs and videos may be captured during events for event coverage, documentation and promotional use. Where applicable, we will provide information about the intended use and obtain consent where required. You may contact us to raise concerns about identifiable media featuring you.",
+        },
+        {
+          heading: "06. Data Security & Retention",
+          body: "We take reasonable measures to protect the information we hold against unauthorised access, loss, misuse or disclosure. We retain personal information only for as long as necessary for the purposes described in this policy, unless a longer retention period is required or permitted by law.",
+        },
+        {
+          heading: "07. Your Choices & Rights",
+          body: "You may contact us to request access to, correction of or deletion of your personal information, or to withdraw consent where applicable. We will respond to requests in accordance with applicable law and may need to retain certain information for legal or operational reasons.",
+        },
+        {
+          heading: "08. Cookies & Website Usage",
+          body: "Our website uses cookies and similar technologies. This is covered in full in our dedicated Cookie Policy, which explains the categories of cookies we use, why we use them and how you can manage your preferences.",
+        },
+        {
+          heading: "09. Contact Us",
+          body: "For privacy-related requests, questions or concerns, contact us at: shiftsecond287@gmail.com",
+        },
+      ],
+};
+
+export const cookiePolicy = {
+  title: "Cookie Policy",
+  intro:
+    "This Cookie Policy explains how Second Shift (Sporting Revolution Ventures LLP) uses cookies and similar technologies on our website and digital platform, and the choices available to you.",
+  sections: [
+    {
+      heading: "01. What Are Cookies",
+      body: "Cookies are small text files placed on your device when you visit a website. They help the site function correctly, remember your preferences, and give us a general understanding of how the site is used. We also use similar browser-storage technologies (such as local storage and session storage) for related purposes.",
+    },
+    {
+      heading: "02. Strictly Necessary Cookies",
+      body: "These are required for the website to function — for example, remembering that you've already seen our intro animation in the current session, or keeping the site secure. The website may not work as intended without these.",
+    },
+    {
+      heading: "03. Functionality Cookies",
+      body: "These remember choices you've made (such as a cookie-consent preference) so we don't ask again on every visit, and help us present a smoother experience across pages.",
+    },
+    {
+      heading: "04. Performance & Analytics Cookies",
+      body: "Where enabled, these help us understand how visitors use our website — which pages are popular, how people navigate between them, and where the experience could be improved. We use this information in aggregate; it is not used to personally identify you.",
+    },
+    {
+      heading: "05. Third-Party Cookies",
+      body: "Some pages link out to third-party services (for example, Instagram, our web app at app.secondshiftclub.com, or payment providers). If you interact with these, they may set their own cookies in accordance with their own policies, which we do not control.",
+    },
+    {
+      heading: "06. Managing Your Cookie Preferences",
+      body: "You can accept or manage cookies through the consent banner shown on your first visit, and at any time through your browser settings, which let you block or delete cookies. Blocking certain cookies may affect site functionality.",
+    },
+    {
+      heading: "07. Changes to This Policy",
+      body: "We may update this Cookie Policy from time to time to reflect changes in the technologies or services we use. Updates will be published on this page with a revised effective date.",
+    },
+    {
+      heading: "08. Contact Us",
+      body: "For questions about this Cookie Policy, contact us at: shiftsecond287@gmail.com",
+    },
+  ],
+};
+
+export const refundPolicy = {
+  title: "Refund & Cancellation Policy",
+  intro:
+    "Our refund and cancellation terms depend on the type of service or event. The applicable terms will be communicated at the time of registration or agreed with the client before a corporate or private event is confirmed.",
+      sections: [
+        {
+          heading: "01. Participant Registrations",
+          body: "Unless otherwise stated in the specific event terms, confirmed registrations are non-refundable once payment has been processed. Please review the event details, eligibility criteria and schedule before registering.",
+        },
+        {
+          heading: "02. Event Cancellation",
+          body: "If Second Shift cancels an event, participants will be informed of the available refund or alternative arrangements. Refunds, where applicable, will be processed through the original payment method or another agreed method.",
+        },
+        {
+          heading: "03. Event Changes",
+          body: "Changes to event schedules, formats, fixtures or venues do not automatically qualify a participant for a refund, provided the event continues as planned in accordance with its stated terms. If a significant change affects your participation, contact us to discuss the options available under the relevant event policy.",
+        },
+        {
+          heading: "04. No-Shows & Withdrawals",
+          body: "If a participant is unable to attend after confirming registration, the registration fee is generally non-refundable and the slot may not be carried forward to another event. Any exceptions will be governed by the event-specific terms.",
+        },
+        {
+          heading: "05. Duplicate Payments",
+          body: "If you have made a duplicate payment for the same registration, please contact us with the relevant transaction details. Verified duplicate payments will be reviewed for a refund.",
+        },
+        {
+          heading: "06. Slot Transfers",
+          body: "Where permitted by the event organisers, participants may request a transfer of their registration to another eligible participant before the stated deadline. Transfers are subject to approval, eligibility requirements and any applicable administrative conditions.",
+        },
+        {
+          heading: "07. Corporate & Private Event Cancellations",
+          body: "For corporate events, brand activations and private tournaments, cancellation, postponement, payment and refund terms will be set out in the applicable written proposal or agreement. These may include advance payments, committed vendor costs and cancellation deadlines.",
+        },
+        {
+          heading: "08. Refund Processing",
+          body: "Approved refunds will be initiated within a reasonable period, subject to verification and the processing timelines of the relevant payment provider or bank. We will communicate any additional information required to process your request.",
+        },
+        {
+          heading: "09. Contact for Refunds",
+          body: "For registration, cancellation or refund queries, contact us at: shiftsecond287@gmail.com",
+        },
+      ],
 };

@@ -17,10 +17,17 @@ export function IntroLoader() {
     const seen = sessionStorage.getItem(SESSION_KEY);
     if (seen) return;
 
-    setShow(true);
     sessionStorage.setItem(SESSION_KEY, "1");
+
+    // Deferred a tick so this isn't a same-frame setState-in-effect: the
+    // decision to show depends on reading sessionStorage (an external,
+    // client-only source), so it can't be computed during the render itself.
+    const raf = requestAnimationFrame(() => setShow(true));
     const timer = setTimeout(() => setDone(true), 1400);
-    return () => clearTimeout(timer);
+    return () => {
+      cancelAnimationFrame(raf);
+      clearTimeout(timer);
+    };
   }, [prefersReducedMotion]);
 
   if (!show) return null;
