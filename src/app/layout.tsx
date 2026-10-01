@@ -1,12 +1,6 @@
 import type { Metadata } from "next";
 import { Unbounded, Space_Grotesk } from "next/font/google";
-import { SmoothScroll } from "@/components/ui/smooth-scroll";
-import { CustomCursor } from "@/components/ui/custom-cursor";
-import { IntroLoader } from "@/components/intro-loader";
-import { Navbar } from "@/components/navbar";
-import { Footer } from "@/components/footer";
-import { WhatsAppButton } from "@/components/ui/whatsapp-button";
-import { CookieConsent } from "@/components/cookie-consent";
+import { SiteChrome } from "@/components/site-chrome";
 import { site } from "@/data/content";
 import "./globals.css";
 
@@ -97,15 +91,7 @@ export default function RootLayout({ children }: LayoutProps<"/">) {
           type="application/ld+json"
           dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
         />
-        <SmoothScroll>
-          <IntroLoader />
-          <CustomCursor />
-          <Navbar />
-          <main className="flex-1">{children}</main>
-          <Footer />
-          <WhatsAppButton />
-          <CookieConsent />
-        </SmoothScroll>
+        <SiteChrome>{children}</SiteChrome>
       </body>
     </html>
   );

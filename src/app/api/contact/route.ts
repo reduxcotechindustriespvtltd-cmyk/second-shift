@@ -1,4 +1,10 @@
 import { NextResponse } from "next/server";
+import { createClient } from "@supabase/supabase-js";
+
+const supabase = createClient(
+  process.env.NEXT_PUBLIC_SUPABASE_URL!,
+  process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY!,
+);
 
 type ContactPayload = {
   name: string;
@@ -23,7 +29,7 @@ export async function POST(request: Request) {
     return NextResponse.json({ error: "Invalid request body." }, { status: 400 });
   }
 
-  const { name, email, phone, interest, message } = body;
+  const { name, company, email, phone, interest, teamSize, message } = body;
 
   if (!name || !email || !phone || !interest || !message) {
     return NextResponse.json(
@@ -36,19 +42,23 @@ export async function POST(request: Request) {
     return NextResponse.json({ error: "Please enter a valid email address." }, { status: 400 });
   }
 
-  // TODO: wire this up to an email/CRM integration, e.g. Resend or Formspree:
-  //
-  //   import { Resend } from "resend";
-  //   const resend = new Resend(process.env.RESEND_API_KEY);
-  //   await resend.emails.send({
-  //     from: "Second Shift <hello@secondshiftclub.com>",
-  //     to: "team@secondshiftclub.com",
-  //     subject: `New enquiry: ${interest}`,
-  //     text: JSON.stringify(body, null, 2),
-  //   });
-  //
-  // For now, submissions are only logged server-side.
-  console.log("[contact] new submission", body);
+  const { error } = await supabase.from("leads").insert({
+    name,
+    company: company || null,
+    email,
+    phone,
+    interest,
+    team_size: teamSize || null,
+    message,
+  });
+
+  if (error) {
+    console.error("[contact] failed to save lead", error);
+    return NextResponse.json(
+      { error: "Something went wrong. Please try again." },
+      { status: 500 },
+    );
+  }
 
   return NextResponse.json({ success: true });
 }

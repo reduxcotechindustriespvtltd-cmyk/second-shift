@@ -555,6 +555,7 @@ export const footerLinks = {
     { label: "Privacy Policy", href: "/privacy-policy" },
     { label: "Cookie Policy", href: "/cookie-policy" },
     { label: "Refund Policy", href: "/refund-policy" },
+    { label: "Admin Login", href: "/admin/login" },
   ],
 };
 
