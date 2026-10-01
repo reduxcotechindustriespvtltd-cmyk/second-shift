@@ -18,7 +18,7 @@ export const site = {
   phoneHref: "tel:+917297091286",
   whatsapp: "https://wa.me/917297091286",
   instagram: "https://instagram.com/secondshift.club",
-  linkedin: "https://linkedin.com/company/secondshift.co", // TODO: confirm real LinkedIn URL
+  linkedin: "https://in.linkedin.com/company/secondshift-co",
 };
 
 // Only 5 primary nav items, per the latest IA — the last one is styled as
