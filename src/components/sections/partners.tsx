@@ -5,9 +5,9 @@ import { partners } from "@/data/content";
 
 function LogoCard({ name, logo }: { name: string; logo: string }) {
   return (
-    <div className="mx-3 flex h-24 w-44 shrink-0 items-center justify-center rounded-2xl bg-pure-black p-6 shadow-[0_10px_30px_rgba(0,0,0,0.25)] sm:h-28 sm:w-52">
+    <div className="mx-3 flex h-28 w-52 shrink-0 items-center justify-center rounded-2xl bg-pure-black p-5 shadow-[0_10px_30px_rgba(0,0,0,0.25)] sm:h-32 sm:w-60">
       <div className="relative h-full w-full">
-        <Image src={logo} alt={name} fill className="object-contain" sizes="200px" />
+        <Image src={logo} alt={name} fill className="object-contain" sizes="240px" />
       </div>
     </div>
   );
