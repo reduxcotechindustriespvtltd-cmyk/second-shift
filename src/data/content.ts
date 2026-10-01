@@ -36,7 +36,7 @@ export const hero = {
   tag: "SPORTS, CURATED FOR EVERY OCCASION.",
   headline: ["COMPETE.", "CONNECT.", "BELONG."],
   subheadline:
-    "Curating sports experiences that bring people together, bringing working professionals together through Football, Cricket & Pickleball.",
+    "Curating sports experiences that bring people together, bringing working professionals together through sports.",
   cta: { label: "Partner With Us", href: "/corporate" },
   // Rotating hero slides — image + label crossfade together every few seconds.
   slides: [
@@ -81,7 +81,7 @@ export const moreThanSport = {
   eyebrow: "SPORTS EVENT COMPANY · JAIPUR, RAJASTHAN",
   headline: "MORE THAN JUST SPORT.",
   body:
-    "We're Second Shift, a sports events and experiences company bringing people together through sport. From corporate events and tournaments to community-led leagues, we create opportunities for people to connect, compete and rediscover their love for the game.",
+    "Second Shift is a sports events and experiences company dedicated to bringing people together through the power of sport. From corporate sporting events and tournaments to community-driven leagues, we design and deliver engaging experiences that foster connection, encourage healthy competition, and inspire a lasting passion for the game.",
 };
 
 export const stats = {
@@ -105,7 +105,7 @@ export const about = {
   tag: "THE SUNDAY LEAGUE - WHERE IT ALL BEGAN",
   headline: "SPORTS, CURATED FOR EVERY OCCASION.",
   body:
-    "From corporate sports days and competitive leagues to community tournaments and brand experiences, we bring people together through amateur sport. We create opportunities to play, compete and connect, building stronger communities through shared experiences on and off the field. From planning to execution, every detail is thoughtfully curated to make sport more accessible, engaging and enjoyable.",
+    "Every great sporting experience starts with a vision and comes to life through the details. At Second Shift, we handle everything from concept development and event planning to on-ground coordination and execution, ensuring every experience runs seamlessly. Our approach combines thoughtful design, strategic organisation and a genuine understanding of what makes sport memorable, creating events that are as effortless to participate in as they are exciting to be part of.",
   images: {
     goalkeeper: {
       src: "/images/gallery/goalkeeper-dive.jpg",
@@ -469,7 +469,7 @@ export const ourWork = {
   flagshipLabel: "OUR FLAGSHIP: THE SUNDAY LEAGUE",
   headline: "THE SUNDAY LEAGUE",
   subheadline:
-    "Curating sports experiences that bring people together — Football, Cricket & Pickleball, built for working professionals who refuse to stop competing.",
+    "Curating sports experiences that bring people together through sports, built for working professionals who refuse to stop competing.",
   format: {
     headline: "15 WEEKS. 3 SPORTS. ONE SEASON.",
     body:
