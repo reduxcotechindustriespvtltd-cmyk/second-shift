@@ -25,11 +25,11 @@ export function About() {
               className="h-[120%] w-full -translate-y-[8%]"
             />
             <div className="absolute bottom-3 left-3 z-10 sm:bottom-4 sm:left-4">
-              <SlantedTag>{about.tag}</SlantedTag>
+              <SlantedTag className="border-pure-black">{about.tag}</SlantedTag>
             </div>
           </div>
 
-          <div className="relative aspect-square overflow-hidden rounded-2xl border-2 border-volt">
+          <div className="relative aspect-square overflow-hidden rounded-2xl">
             <RevealImage
               parallaxStrength={16}
               src={about.images.goalkeeper.src}

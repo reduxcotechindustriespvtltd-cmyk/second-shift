@@ -31,7 +31,7 @@ export function Experience() {
             />
           </div>
 
-          <div className="relative col-span-2 aspect-[4/3] overflow-hidden rounded-2xl border-2 border-volt sm:col-span-1 lg:col-span-3">
+          <div className="relative col-span-2 aspect-[4/3] overflow-hidden rounded-2xl sm:col-span-1 lg:col-span-3">
             <Image
               src={experience.images.trophy.src}
               alt={experience.images.trophy.alt}

@@ -2,6 +2,7 @@
 
 import { useEffect, useState } from "react";
 import Link from "next/link";
+import { usePathname } from "next/navigation";
 import { AnimatePresence, motion } from "framer-motion";
 import { Menu, X, ArrowUpRight } from "lucide-react";
 import { Logo } from "@/components/ui/logo";
@@ -12,6 +13,9 @@ import { cn } from "@/lib/utils";
 export function Navbar() {
   const [scrolled, setScrolled] = useState(false);
   const [open, setOpen] = useState(false);
+  const pathname = usePathname();
+  const isActive = (href: string) =>
+    href === "/" ? pathname === "/" : pathname === href || pathname.startsWith(`${href}/`);
 
   useEffect(() => {
     const onScroll = () => setScrolled(window.scrollY > 24);
@@ -47,7 +51,13 @@ export function Navbar() {
               <li key={item.href}>
                 <Link
                   href={item.href}
-                  className="whitespace-nowrap text-xs font-semibold uppercase tracking-wide text-off-white transition-colors hover:text-volt [text-shadow:0_1px_3px_rgba(0,0,0,0.4)]"
+                  className={cn(
+                    "relative whitespace-nowrap pb-1 text-xs font-semibold uppercase tracking-wide text-off-white transition-colors hover:text-volt [text-shadow:0_1px_3px_rgba(0,0,0,0.4)]",
+                    "after:absolute after:inset-x-0 after:-bottom-0.5 after:h-0.5 after:origin-left after:bg-volt after:transition-transform after:duration-300",
+                    isActive(item.href)
+                      ? "text-volt after:scale-x-100"
+                      : "after:scale-x-0",
+                  )}
                 >
                   {item.label}
                 </Link>
@@ -96,9 +106,15 @@ export function Navbar() {
                   <Link
                     href={item.href}
                     onClick={() => setOpen(false)}
-                    className="font-display block py-2 text-4xl font-black uppercase leading-tight text-off-white transition-colors hover:text-volt sm:text-5xl"
+                    className={cn(
+                      "font-display relative inline-block py-2 text-4xl font-black uppercase leading-tight text-off-white transition-colors hover:text-volt sm:text-5xl",
+                      isActive(item.href) && "text-volt",
+                    )}
                   >
                     {item.label}
+                    {isActive(item.href) && (
+                      <span className="absolute inset-x-0 -bottom-1 h-1 bg-volt" />
+                    )}
                   </Link>
                 </motion.li>
               ))}
