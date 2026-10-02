@@ -13,7 +13,7 @@ export const site = {
   url: "https://secondshiftclub.com",
   webApp: "https://app.secondshiftclub.com/",
   location: "Jaipur, Rajasthan",
-  email: "hello@secondshiftclub.com", // TODO: replace once the new domain/inbox is live
+  email: "info@secondshiftclub.com", // TODO: replace once the new domain/inbox is live
   phone: "+91 72970 91286",
   phoneHref: "tel:+917297091286",
   whatsapp: "https://wa.me/917297091286",
