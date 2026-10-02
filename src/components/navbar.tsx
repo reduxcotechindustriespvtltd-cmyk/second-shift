@@ -7,7 +7,7 @@ import { AnimatePresence, motion } from "framer-motion";
 import { Menu, X, ArrowUpRight } from "lucide-react";
 import { Logo } from "@/components/ui/logo";
 import { MagneticButton } from "@/components/ui/magnetic-button";
-import { nav, navCta, site } from "@/data/content";
+import { nav, navCta } from "@/data/content";
 import { cn } from "@/lib/utils";
 
 export function Navbar() {
@@ -125,17 +125,13 @@ export function Navbar() {
               transition={{ delay: 0.5, duration: 0.5 }}
               className="mt-8 flex flex-col gap-4"
             >
-              <MagneticButton href={navCta.href} onClick={() => setOpen(false)}>
+              <MagneticButton
+                href={navCta.href}
+                onClick={() => setOpen(false)}
+                className="!w-full !bg-volt !text-pure-black"
+              >
                 {navCta.label}
               </MagneticButton>
-              <a
-                href={site.instagram}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="text-sm uppercase tracking-wide text-off-white/60"
-              >
-                Instagram
-              </a>
             </motion.div>
           </motion.div>
         )}

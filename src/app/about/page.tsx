@@ -3,6 +3,7 @@ import { SectionHeading } from "@/components/ui/section-heading";
 import { SlashMark } from "@/components/ui/slash-mark";
 import { About } from "@/components/sections/about";
 import { Execution } from "@/components/sections/execution";
+import { Founders } from "@/components/sections/founders";
 import { Experience } from "@/components/sections/experience";
 import { Testimonials } from "@/components/sections/testimonials";
 import { moreThanSport } from "@/data/content";
@@ -38,6 +39,7 @@ export default function AboutPage() {
 
       <About />
       <Execution />
+      <Founders />
       <Experience />
       <Testimonials />
     </>

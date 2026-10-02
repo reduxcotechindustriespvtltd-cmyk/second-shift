@@ -78,7 +78,7 @@ export const hero = {
 };
 
 export const moreThanSport = {
-  eyebrow: "SPORTS EVENT COMPANY · JAIPUR, RAJASTHAN",
+  eyebrow: "SPORTS EVENT MANAGEMENT · JAIPUR, RAJASTHAN",
   headline: "MORE THAN JUST SPORT.",
   body:
     "Second Shift is a sports events and experiences company dedicated to bringing people together through the power of sport. From corporate sporting events and tournaments to community-driven leagues, we design and deliver engaging experiences that foster connection, encourage healthy competition, and inspire a lasting passion for the game.",
@@ -182,6 +182,37 @@ export const execution = {
   ],
 };
 
+export const founders = {
+  headline: "PEOPLE BEHIND SECOND SHIFT",
+  subline: "Three people, one shared belief, sport has a place in every busy life.",
+  list: [
+    {
+      name: "Jahaan Sethi",
+      role: "Co-Founder",
+      image: {
+        src: "/images/founders/jahaan.JPG",
+        alt: "Jahaan Sethi, Co-Founder of Second Shift",
+      },
+    },
+    {
+      name: "Manan Shyamdasani",
+      role: "Co-Founder",
+      image: {
+        src: "/images/founders/manhan.JPG",
+        alt: "Manan Shyamdasani, Co-Founder of Second Shift",
+      },
+    },
+    {
+      name: "Sarthak Sharma",
+      role: "Co-Founder",
+      image: {
+        src: "/images/founders/sarthak.JPG",
+        alt: "Sarthak Sharma, Co-Founder of Second Shift",
+      },
+    },
+  ],
+};
+
 export const experience = {
   headline: "THE EXPERIENCE BEYOND THE GAME",
   subline:
@@ -197,7 +228,7 @@ export const experience = {
       alt: "Second Shift Sunday League Season 1 Pickleball Champions holding their trophies on the podium",
     },
     cricketChat: {
-      src: "/images/sports/cricket-1.png",
+      src: "/images/sports/IMG_9664.jpg",
       alt: "Two batters chatting mid-pitch during a Second Shift cricket match",
     },
   },
@@ -547,7 +578,7 @@ export const footerLinks = {
     { label: "Our Work", href: "/our-work" },
     { label: "Corporate", href: "/corporate" },
     { label: "Dashboard", href: "/dashboard" },
-    { label: "Web App", href: "https://app.secondshiftclub.com/" },
+    { label: "Web App", href: "https://swing-playcom/" },
     { label: "Let's Plan Your Event", href: "/plan-your-event" },
   ],
   legalLinks: [
