@@ -195,7 +195,7 @@ export const founders = {
       },
     },
     {
-      name: "Manan Shyamdasani",
+      name: "Manhan Shyamdasani",
       role: "Co-Founder",
       image: {
         src: "/images/founders/manhan.JPG",
@@ -228,7 +228,7 @@ export const experience = {
       alt: "Second Shift Sunday League Season 1 Pickleball Champions holding their trophies on the podium",
     },
     cricketChat: {
-      src: "/images/sports/IMG_9664.jpg",
+      src: "/images/sports/new.jpg",
       alt: "Two batters chatting mid-pitch during a Second Shift cricket match",
     },
   },
