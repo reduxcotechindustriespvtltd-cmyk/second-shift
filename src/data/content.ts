@@ -228,7 +228,7 @@ export const experience = {
       alt: "Second Shift Sunday League Season 1 Pickleball Champions holding their trophies on the podium",
     },
     cricketChat: {
-      src: "/images/sports/new.jpg",
+      src: "/images/sports/new.JPG",
       alt: "Two batters chatting mid-pitch during a Second Shift cricket match",
     },
   },
